@@ -1,7 +1,7 @@
 # TỔNG HỢP BÀI TẬP THỰC HÀNH GIT & GITHUB
 Họ và tên:Nông Anh Tú
 Tài khoản GitHub: dtc245160064-cpu
-
+Mã Sinh Viên : dtc245160064
 ---
 
 ## DANH SÁCH REPOSITORY DỰ ÁN
@@ -26,23 +26,27 @@ Staging Area đóng vai trò như một vùng đệm kiểm duyệt, giúp bạn
 
 ### Bài 3: Lịch sử Commit và Reset
 
+Việc dùng git reset --hard để lùi commit khi đã push lên GitHub là không an toàn.
+
+Lệnh này sẽ xóa vĩnh viễn các commit trên máy bạn và làm lệch lịch sử code so với GitHub. Khi bạn ép buộc đẩy code lên (force push), các thay đổi của đồng nghiệp có thể bị ghi đè và mất hoàn toàn, gây xung đột nghiêm trọng cho cả team.
+
+
+<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/169a41e7-85fd-4ade-abeb-b3300f77dc48" />
+<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/22358fca-65aa-4461-9203-6036ecd1739d" />
+
 
 ### Bài 4: Kết nối Remote Repository
-<!-- Kéo thả hoặc dán ảnh chụp lệnh git remote -v vào bên dưới -->
+<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/25b13354-176f-49da-92a0-5efc6cbc53cd" />
+
 
 
 ### Bài 5: Đồng bộ Remote Repository (Clone / Pull / Push)
-<!-- Kéo thả hoặc dán ảnh trước/sau khi git pull vào bên dưới -->
+git pull thực chất là tổ hợp của 2 lệnh:
+
+git fetch: Tải toàn bộ dữ liệu và các commit mới nhất từ Remote Repository về máy local nhưng chưa gộp vào code hiện tại.
+
+git merge: Gộp (hợp nhất) các thay đổi vừa tải về vào nhánh làm việc hiện tại ở local.
+
+<img width="1917" height="1015" alt="image" src="https://github.com/user-attachments/assets/7d2f0b46-f34e-48d7-907a-b0e820268ba1" />
 
 
-**Câu hỏi tư duy Bài 5:** *Lệnh `git pull` thực chất là tổ hợp của 2 lệnh nào?*
-* **Trả lời:** `git pull` là sự kết hợp của lệnh `git fetch` (tải dữ liệu từ remote về) và `git merge` (gộp các thay đổi vừa tải vào nhánh làm việc ở local).
-
-### Bài 6: Quy trình làm việc hoàn chỉnh (Portfolio & Revert)
-<!-- Kéo thả hoặc dán ảnh minh chứng log của Bài 6 vào bên dưới -->
-
-
----
-
-**Câu hỏi tư duy Bài 3 (Bổ sung):** *Việc dùng `git reset --hard` để lùi commit khi đã push lên GitHub có an toàn không?*
-* **Trả lời:** Không an toàn. Lệnh này sẽ xóa vĩnh viễn các commit ở local và làm lệch lịch sử code với GitHub. Nếu ép buộc đẩy code lên (`force push`), các thay đổi của đồng nghiệp có thể bị ghi đè và mất hoàn toàn.
